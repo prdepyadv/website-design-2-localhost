@@ -9,8 +9,8 @@ varun yadav
 $.ajax({
     url: './try.php',
     async : false,
-    success : function(response){
-    console.log(response);
+    success : function(response) {
+        console.log(response);
     }
 });
 </script>

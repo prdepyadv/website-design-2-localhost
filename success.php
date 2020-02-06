@@ -10,6 +10,7 @@ $username = $_SESSION["username"];
 <!DOCTYPE html>
 <html>
 <title>Learn</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,8 +21,6 @@ $username = $_SESSION["username"];
     setTimeout("preventBack()", 0);
     window.onunload=function(){null};
    </script>
-
-
 
 <style type="text/css">
 
@@ -576,4 +575,3 @@ function all_image_show() {
 </script>
 </body>
 </html>
-

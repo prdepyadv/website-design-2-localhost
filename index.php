@@ -12,7 +12,6 @@
     window.onunload=function(){null};
    </script>
 
-
 <style type="text/css">
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
@@ -241,7 +240,6 @@ fieldset {
 <p id="ch5"></p>
 </div>
 
-
 <div class="login">
 <br>
 <form method="post" onsubmit="return gg();" action="./success.php">
@@ -261,8 +259,6 @@ Login</b>
 </fieldset>
 </form>
 </div>
-
-
 
 <div class="container">
 <form method="post" id="pform" onsubmit="return ff();" action="./check.php">
@@ -299,9 +295,6 @@ Registration</b>
 </fieldset>
 </form>
 </div>
-
-
-
 
 <script>
 
@@ -529,9 +522,6 @@ document.getElementsByClassName("bttn")[0].style.border = "solid green";
 }
 }
 
-
-
-
 function mi(){
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var ema = document.getElementsByClassName("inn")[2];
@@ -548,7 +538,6 @@ if(f1==1 && f2==1 && f3==1 && f4==1){
 document.getElementsByClassName("bttn")[0].style.border = "solid green";
 }
 }
-
 
 function funct(){
 var pass = document.getElementsByClassName("inn")[3].value;
@@ -610,22 +599,3 @@ document.getElementsByClassName("inn")[4].value="";
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
