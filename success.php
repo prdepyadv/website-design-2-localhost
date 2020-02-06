@@ -1,6 +1,8 @@
 <?php 
 session_start();
 
+//change
+
 if(empty($_SESSION["username"])){
 	echo "<script>window.location.replace('./index.php')</script>";
 }
