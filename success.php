@@ -433,11 +433,14 @@ function all_data_show(){
 						    var result = JSON.parse(response);
 						 if(result)
 						 {
-							 document.getElementById("mytable").insertRow(0).innerHTML = '<tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Date of Birth</th><th>Register Date</th><th>Phone Number</th><th>Image Path</th><th>Username</th><th></th></tr>';
+                             document.getElementById("mytable").insertRow(0).className= 'row-0';
+                             document.getElementsByClassName('row-0')[0].innerHTML = "<th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Date of Birth</th><th>Register Date</th><th>Phone Number</th><th>Image Path</th><th>Username</th><th></th>";
 							 var i=0;
 							 while(i<result.length)
 							{
-								document.getElementById("mytable").insertRow(-1).innerHTML = '<td>'+result[i]["id"]+'</td><td>'+result[i]["first"]+'</td><td>'+result[i]["last"]+'</td><td>'+result[i]["email"]+'</td><td>'+result[i]["password"]+'</td><td>'+result[i]["dob"]+'</td><td>'+result[i]["register_date"]+'</td><td>'+result[i]["Phone"]+'</td><td>'+result[i]["image_path"]+'</td><td>'+result[i]["username"]+'</td><td><input type="button" value="Edit" onclick="editRow(this)">/<input type="button" value="Delete" onclick="deleteRow(this)"></td>';
+								//document.getElementById("mytable").insertRow(-1).innerHTML = '<td>'+result[i]["id"]+'</td><td>'+result[i]["first"]+'</td><td>'+result[i]["last"]+'</td><td>'+result[i]["email"]+'</td><td>'+result[i]["password"]+'</td><td>'+result[i]["dob"]+'</td><td>'+result[i]["register_date"]+'</td><td>'+result[i]["Phone"]+'</td><td>'+result[i]["image_path"]+'</td><td>'+result[i]["username"]+'</td><td><input type="button" value="Edit" onclick="editRow(this)">/<input type="button" value="Delete" onclick="deleteRow(this)"></td>';
+                                document.getElementById("mytable").insertRow(-1).className= 'row-'+(i+1);
+                                document.getElementsByClassName('row-'+(i+1))[0].innerHTML = '<td>'+result[i]["id"]+'</td><td>'+result[i]["first"]+'</td><td>'+result[i]["last"]+'</td><td>'+result[i]["email"]+'</td><td>'+result[i]["password"]+'</td><td>'+result[i]["dob"]+'</td><td>'+result[i]["register_date"]+'</td><td>'+result[i]["Phone"]+'</td><td>'+result[i]["image_path"]+'</td><td>'+result[i]["username"]+'</td><td><input type="button" value="Edit" onclick="editRow(this)">/<input type="button" value="Delete" onclick="deleteRow(this)"></td>';
 								i=i+1;
 							}
 						 }

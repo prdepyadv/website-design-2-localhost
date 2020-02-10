@@ -29,7 +29,7 @@ if(isset($username)){
 		if(empty($row["id"]) or $row["id"] == $id or $i == 0)
 			
 		{
-			$sql="UPDATE Test SET first = '".$first."', last= '".$last."', email= '".$email."', dob = '".$dob."', Phone = NULLIF('".$phone."','null') WHERE id = '".$id."'";
+			$sql="UPDATE Test SET first = '".$first."', last= '".$last."', email= '".$email."', dob = '".$dob."', Phone = NULLIF('".$phone."','null') , username = '".$username."' WHERE id = '".$id."'";
 
 						if($conn->query($sql))
 							{
