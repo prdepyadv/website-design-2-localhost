@@ -12,3 +12,8 @@ highest marks in all subjects
 ----> select s.number,st.st_name,sb.name from student_subject s left join student_subject s2 on s.sub_id=s2.sub_id and s.number<s2.number left join student st  on s.std_id=st.id left join  subject sb on s.sub_id=sb.id where s2.sub_id is null
 ----> -wrong- select st_name,A.* from student,(select stb.std_id,sb.name,Max(stb.number) from student_subject stb,subject sb where stb.sub_id=sb.id group by sb.name) A where A.std_id=student.id
 ----> -wrong- select s.st_name,sb.name,Max(stb.number) from student_subject stb,subject sb,student s where stb.sub_id=sb.id and stb.std_id=s.id group by sb.name
+
+
+delete from multiple tables
+//////
+----> delete sb.* from subject sb,student_subject stb where sb.id=2 and sb.id=stb.sub_id
